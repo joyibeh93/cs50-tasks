@@ -1,0 +1,21 @@
+<!-- Inside templates/quote.html -->
+{% extends "layout.html" %}
+
+{% block title %}
+    Get Stock Quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Stock Symbol" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Get Quote</button>
+    </form>
+    {% if quote %}
+        <h2>Stock Quote</h2>
+        <p>Symbol: {{ quote.symbol }}</p>
+        <p>Name: {{ quote.name }}</p>
+        <p>Price: {{ quote.price | usd }}</p>
+    {% endif %}
+{% endblock %}

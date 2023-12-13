@@ -1,0 +1,25 @@
+<!-- Inside templates/sell.html -->
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <h2>Sell Stocks</h2>
+    <form action="/sell" method="post">
+        <div class="mb-3">
+            <label for="symbol" class="form-label">Stock Symbol</label>
+            <select class="form-select" id="symbol" name="symbol">
+                {% for stock in stocks %}
+                    <option value="{{ stock.symbol }}">{{ stock.symbol }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="shares" class="form-label">Number of Shares</label>
+            <input autocomplete="off" autofocus class="form-control" id="shares" name="shares" placeholder="Shares" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Sell</button>
+    </form>
+{% endblock %}

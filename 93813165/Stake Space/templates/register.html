@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="sign-up-main" id="register-page">
+        <p class="peerStake" onclick='window.location.href="/"'>STAKE</p>
+       
+        <!-- Sign up form -->
+        <section class="signup-container" id="member">
+            
+            <div class="container-register">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title" >Sign up</h2>
+                        <form method="POST" class="register-form" id="register-form" onsubmit="return validateSignUpForm()">
+                            <div class="form-group">
+                                <label for="name"></label>
+                                <input type="text" name="name" id="name" placeholder="Your Name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"></label>
+                                <input type="email" name="email" id="email" placeholder="Your Email"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"></label>
+                                <input type="password" name="pass" id="pass" placeholder="Password"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"></label>
+                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="static/images/signup-image.jpg" alt="sing up image"></figure>
+                        <a href="#signhere" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sign in Form -->
+        <section class="sign-in-container" id="signhere">
+            <div class="container-sigin">
+                <div class="signup-content">
+                    <div class="signin-image">
+                        <figure><img src="static/images/signin-image.jpg" alt="sing in image"></figure>
+                        <a href="#member" class="signup-image-link" id="signhere">Create an account</a>
+                    </div>
+                    <div class="signup-form signin-form">
+                        <h2 class="form-title">Sign in</h2>
+                        <form method="POST" class="register-form" id="login-form" onsubmit="return validateSignInForm()">
+                            <div class="form-group">
+                                <label for="your_name"></label>
+                                <input type="text" name="your_name" id="your_name" placeholder="Your Name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_pass"></label>
+                                <input type="password" name="your_pass" id="your_pass" placeholder="Password"/>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

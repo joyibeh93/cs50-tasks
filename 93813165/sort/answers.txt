@@ -1,0 +1,10 @@
+sort1 uses: Bubble sort
+
+How do you know?: The time is faster than sort3 but not sort1
+
+sort2 uses: Merged Sort
+
+How do you know?: The time is fatser than the other two sort
+
+sort3 uses:Selection sort
+How do you know?: The time is fast but not as sort1 and sort2

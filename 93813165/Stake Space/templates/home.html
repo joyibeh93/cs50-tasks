@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<main>
+   <nav>
+      {% include "hero.html" %}
+   </nav>
+
+    <section class="container-fluid card">
+      {% include "groups.html" %} 
+      
+
+    </section>
+    <section class="card-sect">
+      
+      {% include "about.html" %}
+
+    </section>
+    <section>
+      {% include "peermodal.html" %}
+    </section>
+    <Section>
+      {% include "live-class-modal.html" %}
+    </Section>
+  
+   
+</main>
+{% endblock %}

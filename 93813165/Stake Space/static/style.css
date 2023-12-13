@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* styling the hero-section */
+#carousel {
+    position: relative;
+}
+
+.carousel-inner {
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-item {
+    height: 100vh; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+}
+
+.slide1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../static/images/bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+.slide2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../static/images/bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Adjust the height as needed */
+}
+.slide3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../static/images/image-slide-3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: #fff; /* Set caption text color */
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    margin: 0; /* Remove default margin */
+}
+.card-img-top{
+    width: 400px;
+    height: 250px;
+    border-radius:50%;
+}
+
+/* STYLING THE HERO PAGE */
+
+.sign-up{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+
+
+/* STYLING THE PEER MODAL */
+.join{
+    text-decoration: none;
+}
+
+/* STYLING about */
+.about{
+    background-color: #f8f8f8;;
+}
+.about-header{
+    text-align: center;
+    padding: 10px;
+}
+
+.body{
+    text-align: justify;
+    line-height: 1.7em;
+    width: 800px;
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+
+
+
+/* STYLING REGISTER/.sign-up */
+.sign-up-main{
+    background: #f8f8f8;
+}
+.card-sect{
+    padding: 10px;
+}
+.peerStake{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f0eb6;
+    padding: 10px;
+}
+.signup-container,.sign-in-container{
+   
+    padding: 150px 0;
+}
+
+.container-register,.container-sigin{
+    width: 950px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.signup-content {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 900px;
+}
+.form-title{
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+.signup-form,
+.login-form {
+    width: 50%;
+    padding: 20px;
+  
+}
+.signin-form{
+    margin-top: 30px;
+}
+/* Add more styles as needed for your form elements */
+.signup-form input,
+.signin-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Style the images inside the forms */
+.signup-image img,
+.signin-image img {
+    /* width: 100%; */
+    height: auto;
+    border-radius: 40px;
+}
+
+/* Style the links inside the forms */
+.signup-image a,
+.signin-image a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Style the form titles */
+.form-title {
+    text-align: center;
+}
+
+/* Style the form buttons */
+.form-submit {
+    background-color: #1f0eb6;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: #3623e2;
+}
+
+
+/* STYLING footer */
+.dark{
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+}

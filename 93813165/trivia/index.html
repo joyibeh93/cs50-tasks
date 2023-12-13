@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+    <style>
+        input.correct {
+            background-color: lightgreen;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const message = document.getElementById('feedback');
+            const buttons = document.querySelectorAll('.answer');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const isCorrect = button.getAttribute('data-answer') === 'correct';
+                    if (isCorrect) {
+                        button.style.backgroundColor = 'green';
+                        message.textContent = 'Correct';
+                        message.style.color = 'green';
+                    } else {
+                        button.style.backgroundColor = 'red';
+                        message.textContent = 'Incorrect';
+                        message.style.color = 'red';
+                    }
+                });
+            });
+
+            const submitButton = document.getElementById('submit');
+            const inputField = document.querySelector('input');
+
+            submitButton.addEventListener('click', function() {
+                const answer = inputField.value.toLowerCase(); // Get the answer in lowercase for case insensitivity
+                if (answer === 'abuja') {
+                    inputField.classList.add('correct');
+                } else {
+                    inputField.classList.add('wrong');
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice</h2>
+            <hr>
+            <h3>Which country won the 2021 World Cup?</h3>
+            <button class="answer" data-answer="incorrect">Nigeria</button>
+            <button class="answer" data-answer="incorrect">Spain</button>
+            <button class="answer" data-answer="correct">Argentina</button>
+            <button class="answer" data-answer="incorrect">Portugal</button>
+
+            <p id="feedback"></p> <!-- Removed extra quotes in the id attribute -->
+        </div>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <h3>What is the capital of Nigeria?</h3>
+            <input type="text" placeholder="Enter your answer">
+            <button id="submit">Check Answer</button>
+        </div>
+    </div>
+</body>
+</html>

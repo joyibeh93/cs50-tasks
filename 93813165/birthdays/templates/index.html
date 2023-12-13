@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Birthdays</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Birthday List</h2>
+
+                <form method="post" action="/">
+                    <label for="name">Name:</label><br/>
+                    <input type="text" id="name" name="name" autofocus autocomplete="off" required><br>
+
+                    <label for="month">Birthday Month:</label><br/>
+                    <input type="number" id="month" name="month" min="1" max="12" required><br>
+
+                    <label for="day">Birthday Day:</label><br/>
+                    <input type="number" id="day" name="day" min="1" max="12" required><br><br>
+
+                    <button type="submit">Add Birthday</button>
+                </form>
+            </div>
+
+            <div class="section">
+
+                <h2>All Birthdays</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Birthday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- TODO: Loop through the database entries to display them in this table -->
+                        {% for birthday in birthdays %}
+                        <tr>
+                                <td>{{birthday.name}}</td>
+                                <td>{{birthday.month}}/{{birthday.day}}</td>
+                                <td>
+                                    <form method="post" action="/delete/{{ birthday.id }}">
+                                        <button type="submit">Delete</button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <a href="/edit/{{ birthday.id }}">Edit</a>
+                                </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
